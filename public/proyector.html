@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sala de Sesiones — Pantalla del salón</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body class="salon">
+  <header>
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div>
+        <div class="brand-title" id="corporacion">Sala de Sesiones</div>
+        <div class="brand-sub" id="sesion">Pantalla del salón</div>
+      </div>
+    </div>
+    <div class="btn-row">
+      <span class="pill" id="reloj">—</span>
+      <span class="pill" id="conexion"><span class="dot"></span> Conectando…</span>
+      <button class="btn sm" id="pantalla-completa">Pantalla completa</button>
+      <button class="btn sm" id="volver">Volver a la mesa</button>
+    </div>
+  </header>
+  <main>
+    <div class="salon-card" id="contenido">
+      <div class="salon-num">—</div>
+      <p class="muted">Esperando a que la Secretaría abra la sesión…</p>
+    </div>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="/js/common.js"></script>
+  <script src="/js/proyector.js"></script>
+</body>
+</html>

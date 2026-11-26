@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sala de Sesiones — Mesa de control</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div>
+        <div class="brand-title">Sala de Sesiones</div>
+        <div class="brand-sub">Mesa de control · v2.0</div>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <span class="pill" id="conexion"><span class="dot"></span> Conectando…</span>
+      <button class="btn sm" id="btn-salon">Pantalla del salón</button>
+      <button class="btn sm" id="btn-creds">Credenciales</button>
+      <button class="btn sm" id="btn-acta">Acta</button>
+      <button class="btn sm" id="btn-exportar">Exportar respaldo</button>
+      <button class="btn sm danger" id="btn-reiniciar">Empezar de cero</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav class="tabs" id="tabs" aria-label="Secciones de la mesa"></nav>
+    <div id="panel" aria-live="polite"></div>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="/js/common.js"></script>
+  <script src="/js/mesa.js"></script>
+</body>
+</html>

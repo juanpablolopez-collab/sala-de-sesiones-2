@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sala de Sesiones — Credenciales</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div class="barra-herramientas">
+    <button class="btn sm" id="volver">Mesa</button>
+    <button class="btn sm" id="csv">Descargar claves (CSV)</button>
+    <button class="btn sm primary" id="imprimir">Imprimir hojas</button>
+  </div>
+  <div class="hoja">
+    <div class="cab">
+      <div>
+        <h1>Credenciales de acceso</h1>
+        <div id="detalles" class="pequeno">Sesión de demostración</div>
+      </div>
+      <div class="escudo" id="escudo">Sala de Sesiones<br>BORRADOR — SIN VALIDEZ JURÍDICA</div>
+    </div>
+    <div class="aviso" style="background:#fff7e8;color:#5b431b;border-color:#d7b26b">
+      <strong>Entregue una hoja a cada concejal.</strong> Cada código QR abre su puesto en el celular, conectado al mismo Wi‑Fi que este computador.
+      La clave impresa debajo sirve si la cámara no lee el código. Si vuelve a guardar el padrón, imprima estas hojas de nuevo.
+    </div>
+    <p class="pequeno"><strong>Dirección para los celulares:</strong> <span class="mono" id="url-base">—</span></p>
+    <div class="grid-cred" id="credenciales"></div>
+    <div class="pie" id="pie"></div>
+  </div>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="/js/common.js"></script>
+  <script src="/js/credenciales.js"></script>
+</body>
+</html>

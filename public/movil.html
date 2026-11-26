@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a1018">
+  <title>Sala de Sesiones — Puesto del concejal</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body class="movil">
+  <header>
+    <div class="brand">
+      <div class="brand-mark">S</div>
+      <div>
+        <div class="brand-title" id="nombre">Sala de Sesiones</div>
+        <div class="brand-sub" id="sesion-info">Puesto del concejal</div>
+      </div>
+    </div>
+    <span class="pill" id="conexion"><span class="dot"></span> —</span>
+  </header>
+
+  <div class="offline" id="offline">Sin conexión con el computador. Revise que esté en el mismo Wi-Fi.</div>
+  <div id="panel" aria-live="polite"></div>
+
+  <section class="card oculto" id="escaner">
+    <div class="entre"><h3>Escanear credencial</h3><button class="btn sm" data-acc="cerrar-escaner">Cerrar</button></div>
+    <p class="help">Apunte la cámara al código QR de otra credencial. Si el celular no reconoce códigos, escriba la clave que aparece debajo del código.</p>
+    <video id="video" playsinline muted></video>
+    <label class="field" style="margin-top:10px"><span>Clave de la credencial (opcional)</span>
+      <input id="token-manual" placeholder="Pegue aquí la clave" autocomplete="off"></label>
+    <button class="btn primary block" data-acc="ir-token">Abrir credencial</button>
+    <div class="help" id="estado-escaner"></div>
+  </section>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="/js/common.js"></script>
+  <script src="/js/movil.js"></script>
+</body>
+</html>

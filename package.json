@@ -1,0 +1,63 @@
+{
+  "name": "sala-de-sesiones-2",
+  "productName": "Sala de Sesiones",
+  "version": "2.0.0",
+  "description": "Sistema local de asistencia, quórum y votación para sesiones de Concejo Municipal",
+  "main": "main.js",
+  "author": {
+    "name": "Sala de Sesiones"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "server": "node server/standalone.js",
+    "dist": "electron-builder --win --x64",
+    "icono": "node build/generar-icono.js",
+    "metadata": "node build/aplicar-metadatos.js",
+    "dist:final": "electron-builder --win --x64 && npm run metadata && electron-builder --win --x64 --prepackaged dist\\win-unpacked",
+    "test": "node test/core.test.js",
+    "smoke": "node test/smoke.js"
+  },
+  "dependencies": {
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "electron": "33.2.0",
+    "electron-builder": "25.1.8"
+  },
+  "build": {
+    "appId": "com.saladesesiones.app",
+    "productName": "Sala de Sesiones",
+    "copyright": "Copyright © 2026 Sala de Sesiones",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "server/**/*",
+      "public/**/*",
+      "package.json"
+    ],
+    "win": {
+      "signAndEditExecutable": false,
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "artifactName": "SalaDeSesiones-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Sala de Sesiones 2.0",
+      "deleteAppDataOnUninstall": false
+    },
+    "compression": "maximum"
+  }
+}

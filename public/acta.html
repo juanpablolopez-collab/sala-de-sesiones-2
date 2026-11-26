@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="es-CO">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sala de Sesiones — Acta (borrador)</title>
+  <link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+  <div class="barra-acciones">
+    <button class="btn sm" id="volver">Mesa</button>
+    <button class="btn sm" id="csv">CSV de resultados</button>
+    <button class="btn sm" id="json">Descargar acta</button>
+    <button class="btn sm primary" id="imprimir">Imprimir</button>
+  </div>
+  <article class="acta" id="acta">
+    <div class="marca-agua">BORRADOR — SIN VALIDEZ JURÍDICA</div>
+    <h1 id="titulo">Acta de sesión</h1>
+    <p class="centro pequeno" id="encabezado">Cargando…</p>
+    <div id="cuerpo"></div>
+    <div id="firmas"></div>
+  </article>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="/js/common.js"></script>
+  <script src="/js/acta.js"></script>
+</body>
+</html>
